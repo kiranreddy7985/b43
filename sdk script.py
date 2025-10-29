@@ -15,3 +15,15 @@ bq mk --table sales_hist_ds.customer_sales user_id:int64,age:integer,gender:stri
 bq ls dataset sales_stg_ds
 bq show sales_stg_ds.customer_sales
 bq show sales_hist_ds.customer_sales
+https://github.com/kiranreddy7985
+https://github.com/kiranreddy7985/my-repo
+
+ git init
+ git add sdk_script.txt
+ git commit -m 'ford migration sdj script 1'
+ git remote add origin https://github.com/kiranreddy7985/b43
+ git branch -M main
+  git push -u origin main
+  
+  https://github.com/kiranreddy7985/my-repo
+   git remote add origin https://github.com/kiranreddy7985/my-repo

@@ -1,0 +1,17 @@
+gcloud auth login
+gsutil ls
+gsutil mb -l us-central1 -c standard gs://sales_use_case
+gsutil ls
+gsutil cp D:\gcp\vedios\gcp\docs\customer_details.csv gs://sales_use_case/
+gsutil ls gs://sales_use_case/
+gsutil cat gs://sales_use_case/customer_details.csv
+gsutil cat gs://sales_use_case/customer_details.csv | head -n 10  --git bash
+gsutil cat gs://sales_use_case/customer_details.csv | tail -n 10
+bq mk --dataset sales_stg_ds
+bq mk --dataset sales_hist_ds
+bq mk --dataset sales_views_ds
+bq mk --table sales_stg_ds.customer_sales user_id:int64,age:integer,gender:string,occupation:string,zip_code:string,description:string
+bq mk --table sales_hist_ds.customer_sales user_id:int64,age:integer,gender:string,occupation:string,zip_code:string,description:string
+bq ls dataset sales_stg_ds
+bq show sales_stg_ds.customer_sales
+bq show sales_hist_ds.customer_sales
